@@ -354,17 +354,17 @@ div.products-list div {
     justify-content: center;
 }
 
-.nigga-container{
+.gallery-container{
     display: flex;
     margin-top: 50px;
     cursor: pointer;
 }
-.nigga{
+.gal{
    aspect-ratio: 1/2;
    opacity:0.5;
    object-fit: cover;
 }
-.nigga:hover{
+.gal:hover{
     opacity:1;
     transition-duration: 0.5s;
     transform: scale(1.2);
