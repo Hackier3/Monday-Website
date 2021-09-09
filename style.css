@@ -76,6 +76,7 @@ a {
 
 .navbar-links li {
     list-style: none;
+    border-radius: 5px;
 }
 
 .navbar-links li a {
@@ -85,7 +86,8 @@ a {
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    transition-duration: 0.3s;
+    background-color: rgb(206, 206, 206);
 }
 
 .shoppng-cart-container {
@@ -352,6 +354,22 @@ div.products-list div {
     justify-content: center;
 }
 
+.nigga-container{
+    display: flex;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.nigga{
+   aspect-ratio: 1/2;
+   opacity:0.5;
+   object-fit: cover;
+}
+.nigga:hover{
+    opacity:1;
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+    z-index: 10;
+}
 
 /*@media (max-width: 800px) {
     .navbar {
