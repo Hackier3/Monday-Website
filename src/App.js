@@ -4,7 +4,7 @@ import Footer from './components/footer';
 import Nav from './components/nav';
 import Home from './components/home/home';
 import He from './components/he/he';
-import She from './components/she/she';
+import She from './images/she';
 import Kids from './components/kids/kids';
 import Sale from './components/sale/sale';
 

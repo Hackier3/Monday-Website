@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Popup from 'reactjs-popup';
 
-export const Nav = (props) => {
+const Nav = () => {
     return (
         <nav className="navbar">
             <a href="/">
@@ -20,37 +21,74 @@ export const Nav = (props) => {
 
             <div className="navbar-links">
                 <ul>
-                    <li>
-                        <Link className="text-link" to="/he">
-                            For him
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="text-link" to="/she">
-                            For her
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="text-link" to="/kids">
-                            Kids
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="text-link" to="/sale">
-                            Sale
-                        </Link>
-                    </li>
+                    {' '}
+                    <Link className="text-link" to="/he">
+                        <li>For him</li>
+                    </Link>
+                    <Link className="text-link" to="/she">
+                        <li>For her</li>
+                    </Link>
+                    <Link className="text-link" to="/kids">
+                        <li>Kids</li>
+                    </Link>
+                    <Link className="text-link" to="/sale">
+                        <li>Sale</li>
+                    </Link>
+                    <PopupExample />
                 </ul>
             </div>
 
             <form action="#" className="shoppng-cart-container">
                 <button className="shopping-cart-button">
                     <i className="fa fa-shopping-cart cart-font"></i>
-                    <div className="cart_number">1</div>
+                    <div className="cart_number">0</div>
                 </button>
             </form>
         </nav>
     );
 };
 
+const PopupExample = () => {
+    const siema = () => {
+        document.querySelector('body').style.overflow =
+            document.querySelector('body').style.overflow === '' ? 'hidden' : '';
+    };
+
+    return (
+        <Popup trigger={<li onClick={siema()}>Trigger</li>}>
+            {(close) => (
+                <div className="popup-parent">
+                    <div className="prepopup">
+                        <div className="popup">
+                            login
+                            <br />
+                            password
+                            <br />
+                            <a
+                                onClick={() => {
+                                    close();
+                                    siema();
+                                }}
+                            >
+                                Exit&times;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </Popup>
+    );
+};
+
 export default withRouter(Nav);
+
+/*     function createPopupWin(pageURL, pageTitle,
+        popupWinWidth, popupWinHeight) {
+        var left = (screen.width - popupWinWidth) / 2;
+        var top = (screen.height - popupWinHeight) / 4;
+
+        var myWindow = window.open(pageURL, pageTitle,
+            'resizable=yes, width=' + popupWinWidth
+            + ', height=' + popupWinHeight + ', top='
+            + top + ', left=' + left);
+    } */
