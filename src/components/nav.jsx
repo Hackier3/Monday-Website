@@ -49,13 +49,13 @@ const Nav = () => {
 };
 
 const PopupExample = () => {
-    const siema = () => {
+    const popup = () => {
         document.querySelector('body').style.overflow =
             document.querySelector('body').style.overflow === '' ? 'hidden' : '';
     };
 
     return (
-        <Popup trigger={<li onClick={siema()}>Trigger</li>}>
+        <Popup trigger={<li onClick={popup()}>Login</li>}>
             {(close) => (
                 <div className="popup-parent">
                     <div className="prepopup">
@@ -64,14 +64,14 @@ const PopupExample = () => {
                             <br />
                             password
                             <br />
-                            <a
+                            <span
                                 onClick={() => {
                                     close();
-                                    siema();
+                                    popup();
                                 }}
                             >
                                 Exit&times;
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
