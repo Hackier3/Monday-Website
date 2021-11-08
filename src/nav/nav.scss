@@ -1,0 +1,132 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    z-index: 1;
+}
+
+.logo-button {
+    font-size: 1rem;
+    margin: 10px 4px 10px 50px;
+    padding-top: 3px;
+    padding-right: auto;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    background: black;
+    color: white;
+    letter-spacing: 4mm;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 39px;
+    height: 39px;
+    background: black;
+    display: none;
+}
+
+.hamburger .bar {
+    width: 39px;
+    height: 10px;
+    background: white;
+}
+
+.strong {
+    letter-spacing: 2mm;
+}
+
+a {
+    color: inherit;
+}
+
+.comeback:link,
+.comeback:visited,
+.comeback:hover,
+.comeback:active {
+    text-decoration: none;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li {
+    display: block;
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.shoppng-cart-container {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-font {
+    font-size: 25px;
+}
+
+.cart_number {
+    width: 18px;
+    height: 18px;
+    background-color: crimson;
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 100%;
+    color: white;
+}
+
+.shopping-cart-button {
+    cursor: pointer;
+}
+//POPUP
+.popup-parent {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.prepopup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    background: green;
+    width: 100%;
+    height: 80%;
+    margin: 20%;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import boot from '../../images/boot.png';
+import './home.scss';
 
 export const Home = () => {
     return (
